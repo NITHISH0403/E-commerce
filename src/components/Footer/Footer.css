@@ -1,0 +1,17 @@
+.footer{
+    margin: 1100px 0 0 0;
+    border: 1px solid black;
+    padding: 30px;
+    width: 1519px;
+    text-align: center;
+    background-color:black;
+    color: white;
+}
+.footer #quotes{
+    font-family: "Imprint MT Shadow", Times, serif;
+    font-size: 20px;
+}
+.footer .comma{
+    font-family: 'Imprint MT Shadow', Times, serif;
+    font-size: 30px;
+}

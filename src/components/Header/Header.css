@@ -1,0 +1,82 @@
+.header{
+    background-image: url("pexels-photo-1181324.jpeg");
+    background-size: cover;
+    height: 600px;
+    box-shadow: -1px 100px 100px black;
+}
+.header .head #logo{
+    font-family: "Old English Text MT", Arial, sans-serif;
+    color: orange;
+    font-size: 40px;
+    margin: 0 0 0 10px;
+    padding: 10px;
+}
+.header .head nav ul{
+    list-style: none;
+    margin: -63px 0 0  570px;
+}
+.header .head nav ul li{
+    float: left;
+    padding: 20px;
+}
+.header .head nav ul li a{
+    text-decoration: none;
+    font-family: "Bahnschrift SemiBold", Arial, sans-serif;
+    font-weight: bold;
+    font-size: 20px;
+    color: white;
+}
+.header .head nav ul li a:hover{
+    box-sizing: border-box;
+    border-bottom: 2px solid red;
+    color: red;
+    transition: 1s;
+    padding: 1px;
+}
+.header .head nav ul li #register{
+    border: 1px solid white;
+    border-radius: 10px;
+    padding: 10px;
+    background: linear-gradient(rgb(255, 208, 0),rgba(255, 0, 162, 0.962));
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+}
+.header .head nav ul li #login{
+    border: 1px solid white;
+    border-radius: 10px;
+    padding: 10px;
+    background: linear-gradient(rgb(255, 208, 0),rgba(255, 0, 162, 0.962));
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+}
+.header .head nav ul li #count{
+    margin: -40px 0 0 25px;
+    border: 1px solid white;
+    width: 20px;
+    height: 20px;
+    background-color: black;
+    text-align: center;
+    border-radius: 20px;
+    font-size: 15px;
+    font-family: 'Times New Roman', Times, serif;
+}
+.header .head nav ul li a i{
+    margin-top: -5px;
+    font-size: 30px;
+}
+#info{
+    width: 550px;
+    color: white;
+    font-family: "Baskerville Old Face", Arial, sans-serif;
+    font-size: 50px;
+    font-weight: bold;
+    margin: 150px 0 0 100px;
+}
+.header #info #highlight{
+    color: orange;
+}
+.header #info #content{
+    margin: 10px 0 0 0;
+    font-size: 16px;
+    font-family: "Bell MT", Arial, sans-serif;
+}
