@@ -4,7 +4,6 @@ import './Header.css';
 
 const Header = ({count}) => {
     return (
-        <>
             <div className="header">
                 <div className="head">
                     <header>
@@ -28,7 +27,6 @@ const Header = ({count}) => {
                     <p id="content">Quick Learn is optimized for learning, testing, and training.  Examples might be simplified to improve reading and basic understanding.  Tutorials, references, and examples are constantly reviewed to avoid errors, but we cannot warrant full correctness of all content.</p>
                 </div>  
             </div>        
-        </>
     );
 }
 
