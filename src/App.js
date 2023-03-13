@@ -24,11 +24,19 @@ const App = () => {
     }
   };
 
+  const Remove = (value) => {
+    const LearnItems = cartItems.find((Items) => Items.id === value.id);
+    if(LearnItems){
+      setCartItems(cartItems.filter(props => props !== value));
+      console.log(cartItems);
+    }
+  };
+
   return (
     <>
       <BrowserRouter>
           <Header count={count} />
-          <Navigation  Items = {Items} cartItems={cartItems} Add={Add} setCount={setCount}/>
+          <Navigation  Items = {Items} cartItems={cartItems} Add={Add} setCount={setCount} Remove={Remove}/>
           <Footer/> 
       </BrowserRouter>
     </>

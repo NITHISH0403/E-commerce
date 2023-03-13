@@ -8,7 +8,7 @@ import Register from '../Register/Register';
 import Login from '../Login/Login';
 import Cart from '../Cart/Cart';
 
-const Navigation = ({Items, cartItems, Add, setCount}) => {
+const Navigation = ({Items, cartItems, Add, setCount, Remove}) => {
     return (
         <>
             <Routes>
@@ -18,7 +18,7 @@ const Navigation = ({Items, cartItems, Add, setCount}) => {
                     <Route exact path='/exercises' element={<Exercises/>}/>
                     <Route exact path='/register' element={<Register />}/>
                     <Route exact path='/login' element={<Login />}/>
-                    <Route exact path='/cart' element={<Cart cartItems={cartItems} Add={Add}/>}/>
+                    <Route exact path='/cart' element={<Cart cartItems={cartItems} Remove={Remove} setCount={setCount}/>}/>
             </Routes>
         </>
     );

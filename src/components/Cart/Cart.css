@@ -43,3 +43,18 @@
 .body .image .cost{
     font-weight: bold;
 }
+.body .image .remove{
+    background-color: rgb(56, 161, 56);
+    color: white;
+    font-family: "Arial Rounded MT", Arial, sans-serif;
+    border: 1px solid rgb(56, 161, 56);
+    border-radius: 5px;
+    padding: 5px;
+    width: 140px;
+    text-align: center;
+    margin: 0 0 10px 55px;
+    cursor: pointer;
+}
+.body .image .remove:hover{
+    background-color: rgb(237, 66, 66);
+}

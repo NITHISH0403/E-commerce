@@ -1,7 +1,7 @@
 import React from "react";
 import './Cart.css';
 
-const Cart = ({cartItems}) => {
+const Cart = ({cartItems, Remove, setCount}) => {
     return (
         <div className="body">
             <h1>Cart Items</h1>
@@ -16,6 +16,9 @@ const Cart = ({cartItems}) => {
                         <img alt={item.name} src={item.image}/>
                         <p class="cost">{item.cost}</p>
                         <p>{item.learn}</p>
+                        <div class="remove">
+                                <h3 onClick={()=>{Remove(item);setCount((count)=>count-1)}}>Remove</h3>
+                        </div>
                     </div>
                 </>
                 ))}   
