@@ -14,14 +14,13 @@ const App = () => {
   
   const Add = (props) => {
     const LearnItems = cartItems.find((Items) => Items.id === props.id);
-    console.log(Items.id, props.id);
     if(LearnItems){
-      setCartItems(cartItems.map((Items => Items.id === props.id ? {...LearnItems, count: props.count +1 }: Items)));
-      console.log(LearnItems);
+      alert("Item already storted.");
       console.log(cartItems);
     }
     else{
-      setCartItems([...cartItems, {...props, count: 1}])
+      setCartItems([...cartItems, {...props, count: 1}]);
+      console.log(props);
     }
   };
 
