@@ -1,8 +1,11 @@
 import React from "react";
+import './References.css';
 
 const References = () => {
     return (
-        <h1>References</h1>
+        <div className="body">
+            <h1>References</h1>
+        </div>
     );
 }
 

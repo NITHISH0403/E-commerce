@@ -1,8 +1,11 @@
 import React from "react";
+import './Exercises.css';
 
 const Exercises = () => {
     return (
-        <h1>Exercises</h1>
+        <div className="body">
+            <h1>Exercises</h1>
+        </div>
     );
 }
 
