@@ -14,9 +14,9 @@ const Cart = ({cartItems, Remove, setCount}) => {
                 <>
                     <div key={item.id} className="image">
                         <img alt={item.name} src={item.image}/>
-                        <p class="cost">{item.cost}</p>
+                        <p className="cost">{item.cost}</p>
                         <p>{item.learn}</p>
-                        <div class="remove">
+                        <div className="remove">
                                 <h3 onClick={()=>{Remove(item);setCount((count)=>count-1)}}>Remove</h3>
                         </div>
                     </div>
