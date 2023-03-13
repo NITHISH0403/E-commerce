@@ -11,9 +11,9 @@ const Content = ({Items, Add,setCount}) => {
                     <>
                         <div className="image">
                             <img alt={Items.name} src={Items.image}/>
-                            <p class="cost">{Items.cost}</p>
+                            <p className="cost">{Items.cost}</p>
                             <p>{Items.learn}</p>
-                            <div class="add">
+                            <div className="add">
                                 <h3 onClick={()=>{Add(Items);setCount((count)=>count+1)}}>Add to Cart</h3>
                             </div>
                         </div>
