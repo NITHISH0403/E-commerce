@@ -1,7 +1,7 @@
 import React from "react";
 import './Cart.css';
 
-const Cart = ({cartItems, Remove, setCount}) => {
+const Cart = ({cartItems, Remove}) => {
     return (
         <div className="body">
             <h1>Cart Items</h1>
@@ -10,15 +10,13 @@ const Cart = ({cartItems, Remove, setCount}) => {
                 <h2>No Items are added.</h2>
             )}
 
-            {cartItems.map((item) =>(
+            {cartItems.map((item,index) =>(
                 <>
                     <div key={item.id} className="image">
                         <img alt={item.name} src={item.image}/>
                         <p className="cost">{item.cost}</p>
                         <p>{item.learn}</p>
-                        <div className="remove">
-                                <h3 onClick={()=>{Remove(item);setCount((count)=>count-1)}}>Remove</h3>
-                        </div>
+                        <h3 className="remove" key={item.id} onClick={()=>{Remove(item)}}>Remove</h3>
                     </div>
                 </>
                 ))}   

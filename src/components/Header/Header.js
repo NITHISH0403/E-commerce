@@ -2,7 +2,8 @@ import React from 'react';
 import {Link, Outlet} from 'react-router-dom';
 import './Header.css';
 
-const Header = ({count}) => {
+const Header = (props) => {
+    const {count} = props;
     return (
             <div className="header">
                 <div className="head">
