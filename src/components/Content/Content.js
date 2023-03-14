@@ -3,6 +3,7 @@ import './Content.css';
 
 const Content = (props) => {
     const {Items, Add} = props;
+
     return (
         <>
             <div className="body">

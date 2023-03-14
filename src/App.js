@@ -11,6 +11,7 @@ const App = () => {
 
   const [cartItems, setCartItems] = useState([]);
   const [count, setCount] = useState(0);
+  console.log(cartItems);
 
   // add cart funtional components
   
@@ -18,11 +19,11 @@ const App = () => {
     const LearnItems = cartItems.find((Items) => Items.id === props.id);
     // check the store the cart already store the items is REMOVE the cart and decrement . otherwise, store the item in cart and 
     if(LearnItems){
+      alert("Conform to remove the cart.");
       Remove(LearnItems);
-      console.log(cartItems);
     }
     else{
-      setCartItems([...cartItems, {...props, count: 1}]);
+      setCartItems([...cartItems, {...props}]);
       setCount((count)=>count+1);
       console.log(props);
     }
@@ -32,10 +33,8 @@ const App = () => {
   const Remove = (value) => {
     const LearnItems = cartItems.find((Items) => Items.id === value.id);
     if(LearnItems){
-      alert("Conform to remove the cart.");
       setCartItems(cartItems.filter(props => props !== value));
       setCount((count)=>count-1);
-      console.log(cartItems);
     }
   };
 

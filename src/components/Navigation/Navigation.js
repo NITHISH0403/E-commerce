@@ -9,7 +9,7 @@ import Login from '../Login/Login';
 import Cart from '../Cart/Cart';
 
 const Navigation = (props) => {
-    const {Items, cartItems, Add, Remove} = props
+    const {Items, cartItems, Add, Remove} = props;
     return (
         <>
             <Routes>
