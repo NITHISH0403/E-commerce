@@ -30,6 +30,9 @@ const Content = (props) => {
                     } else if (i.name.toLowerCase().includes(course.toLowerCase())) {
                         return i;
                     }
+                    else{
+                        alert("No Record found.")
+                    }
                     }).map((product) => (
                     
                     <div key={product.id} className="image">
