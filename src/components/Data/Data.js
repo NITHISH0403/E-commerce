@@ -4,14 +4,14 @@ const Data = {
             id : '1',
             name : 'Web App Development',
             cost : '$295.00',
-            learn : 'Learn web Application Development',
+            learn : 'web Application Development',
             image : './pic/Web App.jpg',
         },
         {
             id : '2',
             name : 'Front end Development',
             cost : '$190.00',
-            learn : 'Learn Frontend Development',
+            learn : 'Frontend Development',
             image : './pic/Front end.jpg',
         },
         {

@@ -58,3 +58,7 @@
 .body .image .add:hover{
     background-color: rgb(237, 66, 66);
 }
+.body #search{
+    position: absolute;
+    margin: -100px 0 0 1000px;
+}
