@@ -26,12 +26,10 @@ const Content = (props) => {
                 </select>
                 { Items.filter(i => {
                     if (course === 'select') {
+                    return i;
+                    } 
+                    if (i.name.toLowerCase().includes(course.toLowerCase())) {
                         return i;
-                    } else if (i.name.toLowerCase().includes(course.toLowerCase())) {
-                        return i;
-                    }
-                    else{
-                        alert("No Record found.")
                     }
                     }).map((product) => (
                     
