@@ -38,11 +38,16 @@ const App = () => {
     }
   };
 
+  const Button = (index) =>{
+    const changeButton = cartItems.findIndex((Items) => Items.id === index.id);
+    return changeButton >=0;
+  }
+
   return (
     <>
       <BrowserRouter>
           <Header count={count} />
-          <Navigation  Items = {Items} cartItems={cartItems} Add={Add} Remove={Remove}/>
+          <Navigation  Items = {Items} cartItems={cartItems} Add={Add} Remove={Remove} Button={Button}/>
           <Footer/> 
       </BrowserRouter>
     </>

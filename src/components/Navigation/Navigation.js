@@ -9,11 +9,11 @@ import Login from '../Login/Login';
 import Cart from '../Cart/Cart';
 
 const Navigation = (props) => {
-    const {Items, cartItems, Add, Remove} = props;
+    const {Items, cartItems, Add, Remove, Button} = props;
     return (
         <>
             <Routes>
-                    <Route index element={<Content Items={Items} Add={Add}/>}/>
+                    <Route index element={<Content Items={Items} Add={Add} Button={Button}/>}/>
                     <Route exact path='/tutorials' element={<Tutorials />}/>
                     <Route exact path='/references' element={<References />}/>
                     <Route exact path='/exercises' element={<Exercises/>}/>

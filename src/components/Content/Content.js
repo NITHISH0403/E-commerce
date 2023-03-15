@@ -37,7 +37,7 @@ const Content = (props) => {
                         <img alt={product.name} src={product.image}/>
                         <p className="cost">{product.cost}</p>
                         <p>{product.learn}</p>
-                        <h3 className="add" onClick={()=>{Add(product)}}>Add to Cart</h3>
+                        <h3 className="add" onClick={()=>{Add(product)}}>{props.Button(product)?"Remove":"Add to Cart"}</h3>
                     </div>
                 ))}
             </div> 
