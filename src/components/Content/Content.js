@@ -1,8 +1,9 @@
 import React, { useState } from "react";
 import './Content.css';
+import { useUserContext } from "../../App";
 
-const Content = (props) => {
-    const {Items, Add} = props;
+const Content = () => {
+    const {Items, Add, Button} = useUserContext();
     const [course, setcourse] = useState("");
 
     return (
@@ -10,7 +11,7 @@ const Content = (props) => {
             <div className="body">
                 <h1>Learn to Code</h1>
                 <h2>With the world's largest web developer site.</h2>
-                <select placeholder="Course Title" onChange={event => setcourse(event.target.value)} id="search">
+                <select onChange={event => setcourse(event.target.value)} id="search">
                     <option>select</option>
                     <option>Web App Development</option>
                     <option>Front end Development</option>
@@ -26,10 +27,13 @@ const Content = (props) => {
                 </select>
                 { Items.filter(i => {
                     if (course === 'select') {
-                    return i;
+                        return true;
                     } 
-                    if (i.name.toLowerCase().includes(course.toLowerCase())) {
-                        return i;
+                    else if (i.name.toLowerCase().includes(course.toLowerCase())) {
+                        return true;
+                    }
+                    else{
+                        return false;
                     }
                     }).map((product) => (
                     
@@ -37,7 +41,7 @@ const Content = (props) => {
                         <img alt={product.name} src={product.image}/>
                         <p className="cost">{product.cost}</p>
                         <p>{product.learn}</p>
-                        <h3 className="add" onClick={()=>{Add(product)}}>{props.Button(product)?"Remove":"Add to Cart"}</h3>
+                        <h3 className="add" onClick={()=>{Add(product)}}>{Button(product)?"Remove":"Add to Cart"}</h3>
                     </div>
                 ))}
             </div> 

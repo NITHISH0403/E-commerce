@@ -8,18 +8,17 @@ import Register from '../Register/Register';
 import Login from '../Login/Login';
 import Cart from '../Cart/Cart';
 
-const Navigation = (props) => {
-    const {Items, cartItems, Add, Remove, Button} = props;
+const Navigation = () => {
     return (
         <>
             <Routes>
-                    <Route index element={<Content Items={Items} Add={Add} Button={Button}/>}/>
+                    <Route index element={<Content/>}/>
                     <Route exact path='/tutorials' element={<Tutorials />}/>
                     <Route exact path='/references' element={<References />}/>
                     <Route exact path='/exercises' element={<Exercises/>}/>
                     <Route exact path='/register' element={<Register />}/>
                     <Route exact path='/login' element={<Login />}/>
-                    <Route exact path='/cart' element={<Cart cartItems={cartItems} Remove={Remove}/>}/>
+                    <Route exact path='/cart' element={<Cart/>}/>
             </Routes>
         </>
     );

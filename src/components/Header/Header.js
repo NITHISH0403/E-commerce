@@ -1,9 +1,11 @@
 import React from 'react';
 import {Link, Outlet} from 'react-router-dom';
 import './Header.css';
+import { useUserContext } from '../../App';
 
-const Header = (props) => {
-    const {count} = props;
+const Header = () => {
+    const {cartItemCount} = useUserContext();
+
     return (
             <div className="header">
                 <div className="head">
@@ -17,7 +19,7 @@ const Header = (props) => {
                                 <li><Link to="/exercises">EXERCISES</Link></li>
                                 <li><Link to="/register" id="register">REGISTER</Link></li>
                                 <li><Link to="/login" id="login">LOG IN</Link></li>
-                                <li><Link to="/cart" id='cart'><i className='fa fa-shopping-cart'></i><h3 id='count'>{count}</h3></Link></li>
+                                <li><Link to="/cart" id='cart'><i className='fa fa-shopping-cart'></i><h3 id='count'>{cartItemCount}</h3></Link></li>
                             </ul>
                         </nav>
                         <Outlet />

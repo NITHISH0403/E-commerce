@@ -26,8 +26,8 @@ const Register = () => {
                         </li><br></br>
                         <li>
                             <label>Language</label><br></br>
-                            <select name="lang">
-                                <option selected>Select</option>
+                            <select name="lang" defaultValue="option1">
+                                <option value="option1">select</option>
                                 <option value="tamil">Tamil</option>
                                 <option value="english">English</option>
                                 <option value="hindi">Hindi</option>

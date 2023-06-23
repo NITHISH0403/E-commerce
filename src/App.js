@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useMemo, createContext, useContext } from 'react';
 import './App.css';
 import { BrowserRouter} from 'react-router-dom';
 import Navigation from './components/Navigation/Navigation';
@@ -6,11 +6,12 @@ import Data from "./components/Data/Data";
 import Header from './components/Header/Header';
 import Footer from './components/Footer/Footer.js';
 
+const UserContext = createContext();
+
 const App = () => {
   const {Items} = Data;
 
   const [cartItems, setCartItems] = useState([]);
-  const [count, setCount] = useState(0);
   console.log(cartItems);
 
   // add cart funtional components
@@ -24,7 +25,6 @@ const App = () => {
     }
     else{
       setCartItems([...cartItems, {...props}]);
-      setCount((count)=>count+1);
       console.log(props);
     }
   };
@@ -34,7 +34,6 @@ const App = () => {
     const LearnItems = cartItems.find((Items) => Items.id === value.id);
     if(LearnItems){
       setCartItems(cartItems.filter(props => props !== value));
-      setCount((count)=>count-1);
     }
   };
 
@@ -43,15 +42,24 @@ const App = () => {
     return changeButton >=0;
   }
 
+  const cartItemCount = useMemo(() => cartItems.length, [cartItems]);
   return (
     <>
       <BrowserRouter>
-          <Header count={count} />
-          <Navigation  Items = {Items} cartItems={cartItems} Add={Add} Remove={Remove} Button={Button}/>
+        <UserContext.Provider value={{cartItemCount, Items, cartItems, Add, Remove, Button}}>
+          <Header/>
+          <Navigation/>
           <Footer/> 
+        </UserContext.Provider>
       </BrowserRouter>
     </>
   );
+}
+
+export function useUserContext(){
+
+  return useContext(UserContext);
+
 }
 
 export default App;
