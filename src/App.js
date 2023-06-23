@@ -2,6 +2,7 @@ import React, { useState, useMemo, createContext, useContext } from 'react';
 import './App.css';
 import { BrowserRouter} from 'react-router-dom';
 import Navigation from './components/Navigation/Navigation';
+import swal from 'sweetalert';
 import Data from "./components/Data/Data";
 import Header from './components/Header/Header';
 import Footer from './components/Footer/Footer.js';
@@ -20,7 +21,7 @@ const App = () => {
     const LearnItems = cartItems.find((Items) => Items.id === props.id);
     // check the store the cart already store the items is REMOVE the cart and decrement . otherwise, store the item in cart and 
     if(LearnItems){
-      alert("Conform to remove the cart.");
+      swal("Conform to remove the cart.");
       Remove(LearnItems);
     }
     else{
