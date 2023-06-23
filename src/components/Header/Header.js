@@ -9,6 +9,7 @@ const Header = () => {
     return (
             <div className="header">
                 <div className="head">
+                    {console.log('header render')}
                     <header>
                         <h1 id="logo">Quick Learn</h1>
                         <nav>
